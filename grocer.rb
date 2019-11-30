@@ -2,25 +2,58 @@ def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
   # Consult README for inputs and outputs
+  counter = 0 
+  while counter < collection.length do 
+    if collection[counter][:item] == name 
+      return collection[counter]
+  end
+    counter += 1 
+  end 
 end
 
 def consolidate_cart(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-end
+  
+  final_array = []
+  counter = 0 
+  while counter < cart.length do 
+    new_item = find_item_by_name_in_collection(cart[counter][:item], final_array)
+    if new_item
+      new_item[:count] += 1 
+    else
+      new_item = {
+        item: cart[counter][:item], 
+        price: cart[counter][:price],
+        clearance: cart[counter][:clearance],
+        count: 1 
+      }
+      final_array << new_item
+    end 
+    counter += 1 
+  end 
+    final_array
+  end 
+
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  new_array = []
+  
+    
+end 
+end 
+cart
 end
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  cart.each do |product_name, stats|
+    stats[:price] -= stats[:price] * 0.2 if stats[:clearance]
+  end 
+  cart
 end
 
 def checkout(cart, coupons)
