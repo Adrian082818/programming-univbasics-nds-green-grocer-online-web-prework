@@ -38,10 +38,11 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  new_array = []
-  
+  counter = 0 
+  while counter < coupon.length do
     
-end 
+  end 
+    counter += 1 
 end 
 cart
 end
