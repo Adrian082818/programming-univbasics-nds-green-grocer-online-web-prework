@@ -70,12 +70,6 @@ def apply_clearance(cart)
       cart[counter][:price] = (cart[counter][:price] - (cart[counter][:price] * 0.2)).round(2)
     counter += 1 
   end 
-  
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
-  # cart.each do |product_name, stats|
-  #   stats[:price] -= stats[:price] * 0.2 if stats[:clearance]
   end 
   cart
 end
