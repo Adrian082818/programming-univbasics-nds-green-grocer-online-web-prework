@@ -50,7 +50,8 @@ def apply_coupons(cart, coupons)
       else 
         cart_item_name = {
           item: coupon_item_name,
-          price: 
+          price: coupons[counter][:cost] / coupons[counter][:num],
+          
         }
       end 
     end 
