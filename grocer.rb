@@ -64,7 +64,10 @@ cart
 end
 
 def apply_clearance(cart)
-  new_array = []
+  counter = 0 
+  while counter < cart.length do
+    
+  end 
   
   # Consult README for inputs and outputs
   #
