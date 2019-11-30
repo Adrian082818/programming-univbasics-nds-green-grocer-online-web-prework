@@ -64,11 +64,13 @@ cart
 end
 
 def apply_clearance(cart)
+  new_array = []
+  
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  cart.each do |product_name, stats|
-    stats[:price] -= stats[:price] * 0.2 if stats[:clearance]
+  # cart.each do |product_name, stats|
+  #   stats[:price] -= stats[:price] * 0.2 if stats[:clearance]
   end 
   cart
 end
